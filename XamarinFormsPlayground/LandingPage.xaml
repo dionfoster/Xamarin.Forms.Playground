@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:playground="clr-namespace:XamarinFormsPlayground;assembly=XamarinFormsPlayground"
+             x:Class="XamarinFormsPlayground.LandingPage">
+  <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <RelativeLayout x:Name="RelativeLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+      <playground:BackgroundView x:Name="BackgroundView" />
+
+      <StackLayout Orientation="Vertical">
+        <Label Text="Other content" FontSize="Medium" TextColor="White"></Label>
+
+        <Button Text="Go to other page" FontSize="Medium" TextColor="White" Clicked="Button_OnClicked"></Button>
+      </StackLayout>
+    </RelativeLayout>
+  </AbsoluteLayout>
+</ContentPage>

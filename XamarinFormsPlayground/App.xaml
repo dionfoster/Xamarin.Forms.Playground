@@ -1,0 +1,33 @@
+﻿<Application 
+  xmlns="http://xamarin.com/schemas/2014/forms" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+  x:Class="XamarinFormsPlayground.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ControlTemplate x:Key="MainPageTemplate">
+        <!--
+          Simple layering with a grid.
+    
+          <Grid>
+            <VisualElement /> Behind
+            <VisualElement /> Front
+          </Grid>
+        -->
+        <Grid>
+          <Image x:Name="BackgroundImage" Aspect="AspectFill">
+            <Image.Source>
+              <OnPlatform
+                x:TypeArguments="ImageSource"
+                iOS="Background.png"
+                Android="Background.png"
+                WinPhone="Assets/Images/Background.png"
+            />
+            </Image.Source>
+          </Image>
+          
+          <ContentPresenter />
+        </Grid>
+      </ControlTemplate>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsPlayground.BackgroundView"
+             Padding="0"
+             Margin="0"
+             RelativeLayout.WidthConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+             RelativeLayout.HeightConstraint = "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+             RelativeLayout.XConstraint = "{ConstraintExpression Type=Constant, Constant=0}"
+             RelativeLayout.YConstraint = "{ConstraintExpression Type=Constant, Constant=0}">
+  <ContentView.Content>
+    <Image x:Name="ViewBackgroundImage" Aspect ="AspectFill">
+      <Image.Source>
+        <OnPlatform x:TypeArguments="ImageSource">
+          <OnPlatform.iOS>
+            <FileImageSource File="Background.png"/>
+          </OnPlatform.iOS>
+          <OnPlatform.Android>
+            <FileImageSource File="Background.png"/>
+          </OnPlatform.Android>
+          <OnPlatform.WinPhone>
+            <FileImageSource File="Assets/Images/Background.png"/>
+          </OnPlatform.WinPhone>
+        </OnPlatform>
+      </Image.Source>
+    </Image>
+  </ContentView.Content>
+</ContentView>
