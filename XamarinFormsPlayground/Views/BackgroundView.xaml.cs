@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace XamarinFormsPlayground
+namespace XamarinFormsPlayground.Views
 {
     public partial class BackgroundView : ContentView
     {

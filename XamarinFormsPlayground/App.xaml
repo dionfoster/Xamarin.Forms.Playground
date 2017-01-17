@@ -1,6 +1,7 @@
 ﻿<Application 
   xmlns="http://xamarin.com/schemas/2014/forms" 
-  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:navigation="clr-namespace:XamarinFormsPlayground.Navigation;assembly=XamarinFormsPlayground"
   x:Class="XamarinFormsPlayground.App">
   <Application.Resources>
     <ResourceDictionary>
@@ -25,9 +26,43 @@
             </Image.Source>
           </Image>
           
-          <ContentPresenter />
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition></RowDefinition>
+              <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <navigation:TitleView 
+              Grid.Row="0"
+              x:Name="NavigationTitleView" 
+              BindingContext="{TemplateBinding BindingContext}" 
+              Title="{TemplateBinding BindingContext.Title}" 
+              LeftImageCommand="{TemplateBinding BindingContext.BackCommand}">
+              <navigation:TitleView.LeftImageSource>
+                <OnPlatform 
+                  x:TypeArguments="ImageSource"
+                  iOS="Back.png"
+                  Android="Back.png"
+                  WinPhone="Assets/Images/Back.png">
+                </OnPlatform>
+              </navigation:TitleView.LeftImageSource>
+            </navigation:TitleView>
+            
+            <ContentPresenter Grid.Row="1" />
+          </Grid>
         </Grid>
       </ControlTemplate>
+
+      <Style x:Key="base-label" TargetType="Label">
+        <Setter Property="FontSize" Value="Medium" />
+      </Style>
+      
+      <Style x:Key="white-label" TargetType="Label" BasedOn="{StaticResource base-label}">
+        <Setter Property="TextColor" Value="#FFFFFF" />
+      </Style>
+      
+      <Style x:Key="white-title-label" TargetType="Label" BasedOn="{StaticResource white-label}">
+        <Setter Property="FontAttributes" Value="Bold"></Setter>
+      </Style>
     </ResourceDictionary>
   </Application.Resources>
 </Application>
