@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using FreshMvvm;
+using Xamarin.Forms;
+using XamarinFormsPlayground.PageModels;
 
 namespace XamarinFormsPlayground
 {
@@ -7,7 +9,10 @@ namespace XamarinFormsPlayground
         public App()
         {
             InitializeComponent();
-            MainPage = new LandingPage();
+
+            var page = FreshPageModelResolver.ResolvePageModel<LandingPageModel>();
+
+            MainPage = new FreshNavigationContainer(page);
         }
     }
 }

@@ -3,6 +3,20 @@
   "version": 2,
   "targets": {
     ".NETStandard,Version=v1.2": {
+      "Fody/1.29.2": {
+        "type": "package"
+      },
+      "FreshMvvm/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshIOC.dll": {},
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshIOC.dll": {},
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.NETCore.Jit/1.0.2": {
         "type": "package"
       },
@@ -103,6 +117,18 @@
           "System.Threading.Timer": "4.0.1",
           "System.Xml.ReaderWriter": "4.0.11",
           "System.Xml.XDocument": "4.0.11"
+        }
+      },
+      "PropertyChanged.Fody/1.52.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "[1.29.2, 2.0.0)"
+        },
+        "compile": {
+          "Lib/netstandard10/PropertyChanged.dll": {}
+        },
+        "runtime": {
+          "Lib/netstandard10/PropertyChanged.dll": {}
         }
       },
       "runtime.native.System/4.0.0": {
@@ -546,6 +572,40 @@
     }
   },
   "libraries": {
+    "Fody/1.29.2": {
+      "sha512": "7SoewNkJQFedmOiJHD5P1akJ1fRow+tFjj/M4QlJ5M5RTHdnDXxEnuSKF2t22aSxTmn9+4wO3FbtOrJYy31xmA==",
+      "type": "package",
+      "path": "Fody/1.29.2",
+      "files": [
+        "Content/FodyWeavers.xml",
+        "Fody.1.29.2.nupkg.sha512",
+        "Fody.dll",
+        "Fody.nuspec",
+        "Fody.pdb",
+        "FodyCommon.dll",
+        "FodyCommon.pdb",
+        "FodyIsolated.dll",
+        "FodyIsolated.pdb",
+        "Mono.Cecil.Mdb.dll",
+        "Mono.Cecil.Pdb.dll",
+        "Mono.Cecil.Rocks.dll",
+        "Mono.Cecil.dll",
+        "build/dotnet/Fody.targets",
+        "build/portable-net+sl+win+wpa+wp/Fody.targets"
+      ]
+    },
+    "FreshMvvm/2.2.0": {
+      "sha512": "4aI4zuQ1tifravEeaAq6kkO61G/SC6YlUtPsjrp8RP8bHaAVGOWcKGaUHGqzpqH5F5W5XdRZZaikuvpeXBdm8Q==",
+      "type": "package",
+      "path": "FreshMvvm/2.2.0",
+      "files": [
+        "FreshMvvm.2.2.0.nupkg.sha512",
+        "FreshMvvm.nuspec",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshIOC.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll.mdb"
+      ]
+    },
     "Microsoft.NETCore.Jit/1.0.2": {
       "sha512": "Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw==",
       "type": "package",
@@ -699,6 +759,25 @@
         "NETStandard.Library.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt"
+      ]
+    },
+    "PropertyChanged.Fody/1.52.1": {
+      "sha512": "4AUZcKZ7APm9m24RAPic7etM23e49lgsK2IISXi+5wAz7UbVQdGWYlfjZmPtai9r+Zt0U0AyoDngw3SJhaG3VA==",
+      "type": "package",
+      "path": "PropertyChanged.Fody/1.52.1",
+      "files": [
+        "Lib/dotnet/PropertyChanged.dll",
+        "Lib/dotnet/PropertyChanged.xml",
+        "Lib/netstandard10/PropertyChanged.dll",
+        "Lib/netstandard10/PropertyChanged.xml",
+        "Lib/portable-net4+sl4+wp8+win8+wpa81+MonoAndroid16+MonoTouch40/PropertyChanged.dll",
+        "Lib/portable-net4+sl4+wp8+win8+wpa81+MonoAndroid16+MonoTouch40/PropertyChanged.xml",
+        "PropertyChanged.Fody.1.52.1.nupkg.sha512",
+        "PropertyChanged.Fody.dll",
+        "PropertyChanged.Fody.nuspec",
+        "PropertyChanged.Fody.pdb",
+        "Tools/install.ps1",
+        "Tools/uninstall.ps1"
       ]
     },
     "runtime.native.System/4.0.0": {
@@ -2936,8 +3015,10 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "FreshMvvm >= 2.2.0",
       "Microsoft.NETCore.Portable.Compatibility >= 1.0.1",
       "NETStandard.Library >= 1.6.0",
+      "PropertyChanged.Fody >= 1.52.1",
       "Xamarin.Forms >= 2.3.3.180"
     ],
     ".NETStandard,Version=v1.2": []

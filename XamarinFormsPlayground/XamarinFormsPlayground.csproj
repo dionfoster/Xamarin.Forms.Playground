@@ -34,35 +34,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AlternateBackgroundImageLayout.xaml.cs">
-      <DependentUpon>AlternateBackgroundImageLayout.xaml</DependentUpon>
+    <Compile Include="PageModels\AlternateBackgroundImagePageModel.cs" />
+    <Compile Include="PageModels\LandingPageModel.cs" />
+    <Compile Include="Pages\AlternateBackgroundImagePage.xaml.cs">
+      <DependentUpon>AlternateBackgroundImagePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BackgroundView.xaml.cs">
+    <Compile Include="Pages\BasePage.cs" />
+    <Compile Include="Views\BackgroundView.xaml.cs">
       <DependentUpon>BackgroundView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LandingPage.xaml.cs">
+    <Compile Include="Pages\LandingPage.xaml.cs">
       <DependentUpon>LandingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\TitleView.xaml.cs">
+      <DependentUpon>TitleView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\VisualTreeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AlternateBackgroundImageLayout.xaml">
+    <EmbeddedResource Include="Pages\AlternateBackgroundImagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="BackgroundView.xaml">
+    <EmbeddedResource Include="Views\BackgroundView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LandingPage.xaml">
+    <EmbeddedResource Include="Pages\LandingPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -75,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Navigation\TitleView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
