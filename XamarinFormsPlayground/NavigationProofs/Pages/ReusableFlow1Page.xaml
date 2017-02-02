@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsPlayground.NavigationProofs.Pages.ReusableFlow1Page">
+  <StackLayout Orientation="Vertical">
+    <Label Text="Reusable Flow 1" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Button Text="Goto Reusable Flow 2" Command="{Binding GotoReusableFlow2Command}"/>
+  </StackLayout>
+</ContentPage>

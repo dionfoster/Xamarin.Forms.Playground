@@ -11,7 +11,9 @@
       <StackLayout Orientation="Vertical">
         <Label Text="Other content" FontSize="Medium" TextColor="White"></Label>
 
-        <Button Text="Go to other page" FontSize="Medium" TextColor="White" Command="{Binding NextCommand}"></Button>
+        <Button Text="Go to other page" FontSize="Medium" TextColor="White" Command="{Binding NextCommand}" />
+        <Button Text="Start navigation" FontSize="Medium" TextColor="White" Command="{Binding StartNavigationCommand}" />
+        
       </StackLayout>
     </RelativeLayout>
   </AbsoluteLayout>
