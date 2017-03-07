@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinFormsPlayground.Pages.ListingPage">
+  <StackLayout Orientation="Vertical">
+    <Button Text="Add ..." Command="{Binding AddCommand}" />
+
+    <Label FontSize="Large" TextColor="Black" FontAttributes="Bold" Text="Items:" />
+    
+    <ListView x:Name="itemListView" ItemsSource="{Binding SavedItems}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell x:Name="itemCell">
+            <ViewCell.ContextActions>
+              <MenuItem BindingContext="{Binding Source={x:Reference itemListView}, Path=BindingContext}" Command="{Binding EditItemCommand}" CommandParameter="{Binding Source={x:Reference itemCell}, Path=BindingContext}" Text="Edit" IsDestructive="False" />
+              <MenuItem BindingContext="{Binding Source={x:Reference itemListView}, Path=BindingContext}" Command="{Binding RemoveItemCommand}" CommandParameter="{Binding Source={x:Reference itemCell}, Path=BindingContext}" Text="Delete" IsDestructive="True" />
+            </ViewCell.ContextActions>
+            <StackLayout Padding="15,0">
+              <Label Text="{Binding Name}" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

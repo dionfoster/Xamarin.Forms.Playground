@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace XamarinFormsPlayground.NavigationProofs.Pages
+namespace XamarinFormsPlayground.Pages
 {
-    public partial class ReusableFlow2Page : ContentPage
+    public partial class ItemPage : ContentPage
     {
-        public ReusableFlow2Page()
+        public ItemPage()
         {
             InitializeComponent();
         }

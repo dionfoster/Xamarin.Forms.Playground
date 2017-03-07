@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace XamarinFormsPlayground.NavigationProofs.Pages
+namespace XamarinFormsPlayground.Pages
 {
-    public partial class SecondHomePage : ContentPage
+    public partial class ListingPage : ContentPage
     {
-        public SecondHomePage()
+        public ListingPage()
         {
             InitializeComponent();
         }
