@@ -3,6 +3,53 @@
   "version": 2,
   "targets": {
     ".NETStandard,Version=v1.2": {
+      "akavache/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Akavache.SQLite3": "[5.0.0]"
+        }
+      },
+      "akavache.core/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.3",
+          "Rx-Main": "2.2.5",
+          "Splat": "1.6.0"
+        },
+        "compile": {
+          "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.dll": {}
+        }
+      },
+      "Akavache.SQLite3/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.bundle_e_sqlite3": "1.1.0",
+          "akavache.core": "5.0.0"
+        },
+        "compile": {
+          "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.Sqlite3.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.Sqlite3.dll": {}
+        }
+      },
+      "Fody/1.29.2": {
+        "type": "package"
+      },
+      "FreshMvvm/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshIOC.dll": {},
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll": {}
+        },
+        "runtime": {
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshIOC.dll": {},
+          "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/FreshMvvm.dll": {}
+        }
+      },
       "Microsoft.NETCore.Jit/1.0.2": {
         "type": "package"
       },
@@ -105,6 +152,15 @@
           "System.Xml.XDocument": "4.0.11"
         }
       },
+      "Newtonsoft.Json/6.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.native.System/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -116,6 +172,98 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Rx-Core/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.dll": {}
+        }
+      },
+      "Rx-Interfaces/2.2.5": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.dll": {}
+        }
+      },
+      "Rx-Linq/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.dll": {}
+        }
+      },
+      "Rx-Main/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5",
+          "Rx-Linq": "2.2.5",
+          "Rx-PlatformServices": "2.2.5"
+        }
+      },
+      "Rx-PlatformServices/2.2.5": {
+        "type": "package",
+        "dependencies": {
+          "Rx-Core": "2.2.5",
+          "Rx-Interfaces": "2.2.5"
+        },
+        "compile": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.dll": {}
+        }
+      },
+      "Splat/1.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/Portable-net45+win+wpa81+wp80/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/Portable-net45+win+wpa81+wp80/Splat.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "SQLitePCLRaw.core": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_e_sqlite3.dll": {},
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_e_sqlite3.dll": {},
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
         }
       },
       "System.Collections/4.0.11": {
@@ -546,6 +694,77 @@
     }
   },
   "libraries": {
+    "akavache/5.0.0": {
+      "sha512": "rV5GkRTGfqV5x6ZiWvthouO8W9hQ58ncPdKTuqowBgtjs70E6HrTGr80ar66/rNhdc1J02v8lLP7xtD8a0Bd+A==",
+      "type": "package",
+      "path": "akavache/5.0.0",
+      "files": [
+        "LICENSE",
+        "akavache.5.0.0.nupkg.sha512",
+        "akavache.nuspec"
+      ]
+    },
+    "akavache.core/5.0.0": {
+      "sha512": "3jy09Yy5BFMVrLd3CTN2Q1EeDiWkX2VO43ByMb20+uOKB6bSlajViyj4vAC9vrKlt4ZzsrWp+1OU1MIXEF2J/g==",
+      "type": "package",
+      "path": "akavache.core/5.0.0",
+      "files": [
+        "akavache.core.5.0.0.nupkg.sha512",
+        "akavache.core.nuspec",
+        "lib/MonoAndroid/Akavache.dll",
+        "lib/MonoAndroid/Akavache.pdb",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.dll",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.pdb",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.xml",
+        "lib/Portable-Win81+Wpa81/Akavache.dll",
+        "lib/Portable-Win81+Wpa81/Akavache.pdb",
+        "lib/Portable-Win81+Wpa81/Akavache.pri",
+        "lib/Portable-Win81+Wpa81/Akavache.xml",
+        "lib/Xamarin.Mac10/Akavache.dll",
+        "lib/Xamarin.Mac10/Akavache.pdb",
+        "lib/Xamarin.iOS10/Akavache.dll",
+        "lib/Xamarin.iOS10/Akavache.pdb",
+        "lib/net45/Akavache.dll",
+        "lib/net45/Akavache.pdb",
+        "lib/net45/Akavache.xml",
+        "src/EncryptionProvider.cs",
+        "src/Facades.cs",
+        "src/HttpMixin.cs",
+        "src/IsolatedStorageProvider.cs",
+        "src/MD5.cs",
+        "src/MD5Managed.cs",
+        "src/MacFilesystemProvider.cs",
+        "src/ProtectDataShim.cs",
+        "src/Registrations.cs",
+        "src/SimpleFilesystemProvider.cs",
+        "src/StreamMixins.cs",
+        "src/Utility.cs"
+      ]
+    },
+    "Akavache.SQLite3/5.0.0": {
+      "sha512": "jXHuhf9MJQ7lt0l3/SRAOaT0XFpPQUFnSA+8d+YDXArKDgeqodpmxQbK9MNUqqo5NFT2O0eaGs+VDsiADrcXOw==",
+      "type": "package",
+      "path": "Akavache.SQLite3/5.0.0",
+      "files": [
+        "akavache.sqlite3.5.0.0.nupkg.sha512",
+        "akavache.sqlite3.nuspec",
+        "content/AkavacheSqliteLinkerOverride.cs.pp",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.Sqlite3.dll",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.Sqlite3.pdb",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.Sqlite3.pdb.srcsrv",
+        "lib/Portable-Net45+Win8+WP8+Wpa81/Akavache.Sqlite3.xml",
+        "src/AsyncLock.cs",
+        "src/BlockingCollection.cs",
+        "src/EncryptedBlobCache.cs",
+        "src/OperationQueue.cs",
+        "src/OperationQueueCoalescing.cs",
+        "src/Operations.cs",
+        "src/Registrations.cs",
+        "src/SQLite.cs",
+        "src/SQLiteEncryptedBlobCache.cs",
+        "src/SqlitePersistentBlobCacheNext.cs"
+      ]
+    },
     "Microsoft.NETCore.Jit/1.0.2": {
       "sha512": "Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw==",
       "type": "package",
@@ -701,6 +920,30 @@
         "dotnet_library_license.txt"
       ]
     },
+    "Newtonsoft.Json/6.0.3": {
+      "sha512": "kN7Xp8vjnSEiLsyo5ZiKrRFgBU4P8CvcdxGSUBQ3W2OLqDK5rIABHkgN9Yjzh6kZ7BD58Ge19fz5GvfCnwmyGA==",
+      "type": "package",
+      "path": "Newtonsoft.Json/6.0.3",
+      "files": [
+        "Newtonsoft.Json.6.0.3.nupkg.sha512",
+        "Newtonsoft.Json.nuspec",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netcore45/Newtonsoft.Json.dll",
+        "lib/netcore45/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl4+wp7+win8/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl4+wp7+win8/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "tools/install.ps1"
+      ]
+    },
     "runtime.native.System/4.0.0": {
       "sha512": "QfS/nQI7k/BLgmLrw7qm7YBoULEvgWnPI+cYsbfCVFTW8Aj+i8JhccxcFMu1RWms0YZzF+UHguNBK4Qn89e2Sg==",
       "type": "package",
@@ -711,6 +954,228 @@
         "lib/netstandard1.0/_._",
         "runtime.native.System.4.0.0.nupkg.sha512",
         "runtime.native.System.nuspec"
+      ]
+    },
+    "Rx-Core/2.2.5": {
+      "sha512": "DfWVTfW6tvRkkqpnRHKxPIvaRZyDJGADuqrE6J2nwejOQbLRWi0rNUwXkViDWz++25BGDy3iRE5OE6Dv8mJxYQ==",
+      "type": "package",
+      "path": "Rx-Core/2.2.5",
+      "files": [
+        "Rx-Core.2.2.5.nupkg.sha512",
+        "Rx-Core.nuspec",
+        "lib/net40/System.Reactive.Core.XML",
+        "lib/net40/System.Reactive.Core.dll",
+        "lib/net45/System.Reactive.Core.XML",
+        "lib/net45/System.Reactive.Core.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Core.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Core.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Core.dll",
+        "lib/portable-win81+wpa81/System.Reactive.Core.XML",
+        "lib/portable-win81+wpa81/System.Reactive.Core.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Core.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Core.dll",
+        "lib/sl5/System.Reactive.Core.XML",
+        "lib/sl5/System.Reactive.Core.dll",
+        "lib/windows8/System.Reactive.Core.XML",
+        "lib/windows8/System.Reactive.Core.dll",
+        "lib/windowsphone71/System.Reactive.Core.XML",
+        "lib/windowsphone71/System.Reactive.Core.dll",
+        "lib/windowsphone8/System.Reactive.Core.XML",
+        "lib/windowsphone8/System.Reactive.Core.dll"
+      ]
+    },
+    "Rx-Interfaces/2.2.5": {
+      "sha512": "FKtG2QfMIeUcfB7r3a89VoAiszX3DTvYETkpC6U0FzWpxRK/mcHyzYOsniDfag+NsDG0P1k1c8yNSefXKp3t2A==",
+      "type": "package",
+      "path": "Rx-Interfaces/2.2.5",
+      "files": [
+        "Rx-Interfaces.2.2.5.nupkg.sha512",
+        "Rx-Interfaces.nuspec",
+        "lib/net40/System.Reactive.Interfaces.XML",
+        "lib/net40/System.Reactive.Interfaces.dll",
+        "lib/net45/System.Reactive.Interfaces.XML",
+        "lib/net45/System.Reactive.Interfaces.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Interfaces.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Interfaces.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Interfaces.dll",
+        "lib/portable-win81+wpa81/System.Reactive.Interfaces.XML",
+        "lib/portable-win81+wpa81/System.Reactive.Interfaces.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Interfaces.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Interfaces.dll",
+        "lib/sl5/System.Reactive.Interfaces.XML",
+        "lib/sl5/System.Reactive.Interfaces.dll",
+        "lib/windows8/System.Reactive.Interfaces.XML",
+        "lib/windows8/System.Reactive.Interfaces.dll",
+        "lib/windowsphone71/System.Reactive.Interfaces.XML",
+        "lib/windowsphone71/System.Reactive.Interfaces.dll",
+        "lib/windowsphone8/System.Reactive.Interfaces.XML",
+        "lib/windowsphone8/System.Reactive.Interfaces.dll"
+      ]
+    },
+    "Rx-Linq/2.2.5": {
+      "sha512": "UTeCIu3cWPExxmTzdiVq7SalqTBhUaomBTaAC9LpYPoAopjlFwA3hjVWXoLkGlDc/44wqJemJuEwFP00KphiFg==",
+      "type": "package",
+      "path": "Rx-Linq/2.2.5",
+      "files": [
+        "Rx-Linq.2.2.5.nupkg.sha512",
+        "Rx-Linq.nuspec",
+        "lib/net40/System.Reactive.Linq.XML",
+        "lib/net40/System.Reactive.Linq.dll",
+        "lib/net45/System.Reactive.Linq.XML",
+        "lib/net45/System.Reactive.Linq.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Linq.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.Linq.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.Linq.dll",
+        "lib/portable-win81+wpa81/System.Reactive.Linq.XML",
+        "lib/portable-win81+wpa81/System.Reactive.Linq.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Linq.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.Linq.dll",
+        "lib/sl5/System.Reactive.Linq.XML",
+        "lib/sl5/System.Reactive.Linq.dll",
+        "lib/windows8/System.Reactive.Linq.XML",
+        "lib/windows8/System.Reactive.Linq.dll",
+        "lib/windowsphone71/System.Reactive.Linq.XML",
+        "lib/windowsphone71/System.Reactive.Linq.dll",
+        "lib/windowsphone8/System.Reactive.Linq.XML",
+        "lib/windowsphone8/System.Reactive.Linq.dll"
+      ]
+    },
+    "Rx-Main/2.2.5": {
+      "sha512": "qdQ6qENEiLsp/LRdzZlLlodihWN8VDjwNfWa8c2ELjEHZgTdKzt1V4i61gkHVtFKZXe8Px6KupbMP3pZ+1tusQ==",
+      "type": "package",
+      "path": "Rx-Main/2.2.5",
+      "files": [
+        "Rx-Main.2.2.5.nupkg.sha512",
+        "Rx-Main.nuspec"
+      ]
+    },
+    "Rx-PlatformServices/2.2.5": {
+      "sha512": "pMnNEvJVjT+wuDib+W/bi5hhIYcre7dW5yxvKrJxnR4iKJ1VLA/dY2FTtjDriHGx7OeGn12lQewXlH2oHiWFPA==",
+      "type": "package",
+      "path": "Rx-PlatformServices/2.2.5",
+      "files": [
+        "Rx-PlatformServices.2.2.5.nupkg.sha512",
+        "Rx-PlatformServices.nuspec",
+        "lib/net40/System.Reactive.PlatformServices.XML",
+        "lib/net40/System.Reactive.PlatformServices.dll",
+        "lib/net45/System.Reactive.PlatformServices.XML",
+        "lib/net45/System.Reactive.PlatformServices.dll",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.PlatformServices.XML",
+        "lib/portable-net40+sl5+win8+wp8/System.Reactive.PlatformServices.dll",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.XML",
+        "lib/portable-net45+winrt45+wp8+wpa81/System.Reactive.PlatformServices.dll",
+        "lib/portable-win81+wpa81/System.Reactive.PlatformServices.XML",
+        "lib/portable-win81+wpa81/System.Reactive.PlatformServices.dll",
+        "lib/portable-windows8+net45+wp8/System.Reactive.PlatformServices.XML",
+        "lib/portable-windows8+net45+wp8/System.Reactive.PlatformServices.dll",
+        "lib/sl5/System.Reactive.PlatformServices.XML",
+        "lib/sl5/System.Reactive.PlatformServices.dll",
+        "lib/windows8/System.Reactive.PlatformServices.XML",
+        "lib/windows8/System.Reactive.PlatformServices.dll",
+        "lib/windowsphone71/System.Reactive.PlatformServices.XML",
+        "lib/windowsphone71/System.Reactive.PlatformServices.dll",
+        "lib/windowsphone8/System.Reactive.PlatformServices.XML",
+        "lib/windowsphone8/System.Reactive.PlatformServices.dll"
+      ]
+    },
+    "Splat/1.6.0": {
+      "sha512": "266mgVQffaOdAACI9rXcCdaMUUwlmJ+gLkQ7vKv2YIwipStt3RP+DPc3sqGBdC7Cis8SymVFzTIOerYrqMyKYQ==",
+      "type": "package",
+      "path": "Splat/1.6.0",
+      "files": [
+        "Splat.1.6.0.nupkg.sha512",
+        "Splat.nuspec",
+        "lib/MonoMac/Splat.dll",
+        "lib/MonoMac/Splat.dll.mdb",
+        "lib/Net45/Splat.dll",
+        "lib/Net45/Splat.pdb",
+        "lib/NetCore45/Splat.dll",
+        "lib/NetCore45/Splat.pdb",
+        "lib/NetCore45/Splat.pri",
+        "lib/Portable-Win81+Wpa81/Splat.dll",
+        "lib/Portable-Win81+Wpa81/Splat.pdb",
+        "lib/Portable-Win81+Wpa81/Splat.pri",
+        "lib/Portable-net45+win+wpa81+wp80/Splat.dll",
+        "lib/Xamarin.Mac10/Splat-XamarinMac.csproj.FilesWrittenAbsolute.txt",
+        "lib/Xamarin.Mac10/Splat.dll",
+        "lib/Xamarin.Mac10/Splat.dll.mdb",
+        "lib/Xamarin.iOS10/Splat.dll",
+        "lib/Xamarin.iOS10/Splat.dll.mdb",
+        "lib/monoandroid/Splat.dll",
+        "lib/monoandroid/Splat.dll.mdb",
+        "lib/monotouch/Splat.dll",
+        "lib/monotouch/Splat.dll.mdb",
+        "lib/wp8/Splat.dll",
+        "lib/wp8/Splat.pdb"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/1.1.0": {
+      "sha512": "oJu/SK1jiFtQ46AF+TmpAWHrS1E0/QPWA17qoWgXBe/bzPGmoRpiYBipMbpMYTKIybtuJyIzWpUQRJOcGD5rFA==",
+      "type": "package",
+      "path": "SQLitePCLRaw.bundle_e_sqlite3/1.1.0",
+      "files": [
+        "SQLitePCLRaw.bundle_e_sqlite3.1.1.0.nupkg.sha512",
+        "SQLitePCLRaw.bundle_e_sqlite3.nuspec",
+        "build/wp8/SQLitePCLRaw.bundle_e_sqlite3.targets",
+        "build/wp80/arm/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "build/wp80/arm/SQLitePCLRaw.batteries_v2.dll",
+        "build/wp80/x86/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "build/wp80/x86/SQLitePCLRaw.batteries_v2.dll",
+        "lib/MonoAndroid/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/MonoAndroid/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net35/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/net35/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net40/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/net40/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net45/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/net45/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/netcoreapp/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/win8/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/win8/SQLitePCLRaw.batteries_v2.dll",
+        "lib/win81/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/win81/SQLitePCLRaw.batteries_v2.dll",
+        "lib/wp8/_._",
+        "lib/wpa81/SQLitePCLRaw.batteries_e_sqlite3.dll",
+        "lib/wpa81/SQLitePCLRaw.batteries_v2.dll"
+      ]
+    },
+    "SQLitePCLRaw.core/1.1.0": {
+      "sha512": "e5Bm2K2B2v9z8jHm1nyEN1M8pH6GG8emIboMhsqDzuLIf9uWvGPsdNm0WzWeG6oxSmTgSQsLajcuqA1gDAIMJw==",
+      "type": "package",
+      "path": "SQLitePCLRaw.core/1.1.0",
+      "files": [
+        "SQLitePCLRaw.core.1.1.0.nupkg.sha512",
+        "SQLitePCLRaw.core.nuspec",
+        "lib/MonoAndroid/SQLitePCLRaw.core.dll",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/net35/SQLitePCLRaw.core.dll",
+        "lib/net40/SQLitePCLRaw.core.dll",
+        "lib/net45/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.0/SQLitePCLRaw.core.dll",
+        "lib/netstandard1.1/SQLitePCLRaw.core.dll",
+        "lib/portable-net40+sl5+netcore45+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLitePCLRaw.core.dll",
+        "lib/uap10.0/SQLitePCLRaw.core.dll",
+        "lib/win8/SQLitePCLRaw.core.dll",
+        "lib/win81/SQLitePCLRaw.core.dll",
+        "lib/wpa81/SQLitePCLRaw.core.dll"
       ]
     },
     "System.Collections/4.0.11": {
@@ -2938,7 +3403,8 @@
     "": [
       "Microsoft.NETCore.Portable.Compatibility >= 1.0.1",
       "NETStandard.Library >= 1.6.0",
-      "Xamarin.Forms >= 2.3.3.180"
+      "Xamarin.Forms >= 2.3.3.180",
+      "akavache >= 5.0.0"
     ],
     ".NETStandard,Version=v1.2": []
   },

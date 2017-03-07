@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using Akavache;
+using FreshMvvm;
+using Xamarin.Forms;
+using XamarinFormsPlayground.PageModels;
 
 namespace XamarinFormsPlayground
 {
@@ -6,8 +9,11 @@ namespace XamarinFormsPlayground
     {
         public App()
         {
-            InitializeComponent();
-            MainPage = new LandingPage();
+            BlobCache.ApplicationName = "AkavacheExperiment";
+
+            var page = FreshPageModelResolver.ResolvePageModel<ListingPageModel>();
+
+            MainPage = new FreshNavigationContainer(page);
         }
     }
 }
