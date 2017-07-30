@@ -1,15 +1,15 @@
-﻿{
+{
   "supports": {},
   "dependencies": {
     "FreshMvvm": "2.2.0",
-    "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
-    "NETStandard.Library": "1.6.0",
     "PropertyChanged.Fody": "1.52.1",
-    "Xamarin.Forms": "2.3.3.180"
+    "Xamarin.Forms": "2.3.3.180",
+    "NETStandard.Library": "1.6.0",
+    "Microsoft.NETCore.Portable.Compatibility": "1.0.1"
   },
   "frameworks": {
     "netstandard1.2": {
-      "imports": "portable-net45+wpa81+wp8+win8"
+      "imports": [ "portable-net45+wpa81+wp8+win8" ]
     }
   }
 }
