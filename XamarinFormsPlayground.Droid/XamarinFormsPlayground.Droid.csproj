@@ -141,12 +141,6 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamarinFormsPlayground\XamarinFormsPlayground.csproj">
-      <Project>{8e19da2f-6fde-4468-856e-7545a8b532b3}</Project>
-      <Name>XamarinFormsPlayground</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\Background.png" />
   </ItemGroup>
   <ItemGroup>
@@ -170,7 +164,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\Back.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />  
+  <ItemGroup>
+    <ProjectReference Include="..\XamarinFormsPlayground\XamarinFormsPlayground.csproj">
+      <Project>{f1e3281f-d4db-4a8c-9cdd-24884a8fd50d}</Project>
+      <Name>XamarinFormsPlayground</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
 </Project>
